@@ -29,7 +29,7 @@ function generateHTML(data) {
 }
 
 btn.addEventListener('click', (event) => {
-  getJSON(astrosUrl,(json) =>{
+  getJSON(astrosUrl, (json) =>{
       json.people.map(person => {
         getJSON(wikiUrl + person.name, generateHTML);
       });
